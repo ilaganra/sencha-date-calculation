@@ -72,9 +72,9 @@ Ext.define('DateApp.view.Main', {
                                 Ext.Msg.alert(null,'Input must be less than 6 digits.');
                             }
                             else{
-                                var dt = Ext.Date.add(new Date(date),Ext.Date.DAY, parseInt(days));
-                                dt = Ext.Date.add(new Date(dt), Ext.Date.YEAR, parseInt(years));
-                                dt = Ext.Date.add(new Date(dt), Ext.Date.MONTH,parseInt(months) );
+                                var dt = Ext.Date.add(new Date(date),Ext.Date.DAY, parseInt(days,10));
+                                dt = Ext.Date.add(new Date(dt), Ext.Date.YEAR, parseInt(years,10));
+                                dt = Ext.Date.add(new Date(dt), Ext.Date.MONTH,parseInt(months,10) );
                                 Ext.Msg.alert(null, dt);
                             }
                         }
